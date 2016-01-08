@@ -1,0 +1,15 @@
+---
+- name: Copying the script to install tomcat7 on the server
+  copy:
+    src: tomcat_install.sh
+    dest: /tmp
+  #  state: present
+    mode: u+x
+
+- name: Executing the script to install tomcat7
+  shell: sudo sh /tmp/tomcat_install.sh
+
+- name: Deleting the script
+  file: 
+    path: /tmp/tomcat_install.sh
+    state: absent

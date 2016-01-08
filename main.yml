@@ -1,0 +1,8 @@
+---
+- name: installing java
+  hosts: webserver
+  sudo: yes
+  tasks:
+    - include: tomcat.yml
+
+

@@ -1,0 +1,9 @@
+---
+- name: installing nginx
+  hosts: webserver
+  sudo: yes
+  tasks:
+    - name: installing nginx
+      apt: 
+        name: nginx
+        state: latest
